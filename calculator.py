@@ -1,8 +1,8 @@
 print("Welcome to the calculator program!")
+expression = input("Enter a mathematical expression to evaluate: ")
+first_number = input("Enter the first number: ")
+second_number = input("Enter the second number: ")
 def function(): 
-    expression = input("Enter a mathematical expression to evaluate: ")
-    first_number = input("Enter the first number: ")
-    second_number = input("Enter the second number: ")
     if expression == "add" or expression == "+":
         final = int(first_number) + int(second_number)
         print(f"The result of adding {first_number} and {second_number} is: {final}")
@@ -22,6 +22,23 @@ def function():
         print("Invalid operation. Please enter add (+), subtract (-), multiply (*), or divide (/).")
 function()
 
+print("Thank you for using the calculator program!")
+input("do you want to run again? (press enter to exit, type 'yes' to continue): ")
+if (input().lower() == "yes"):
+    expression = input("Enter a mathematical expression to evaluate: ")
+    first_number = input("Enter the first number: ")
+    second_number = input("Enter the second number: ")
+    function()
 
+elif (input().lower() != "yes"):
+    function()
+    expression = input("Enter a mathematical expression to evaluate: ")
+    first_number = input("Enter the first number: ")
+    second_number = input("Enter the second number: ")
+elif (input().lower() == "no"):
+    print("Goodbye!")
+else:
+    print("Invalid input. Exiting the program.")
+input("Press Enter to exit...")
 
 
